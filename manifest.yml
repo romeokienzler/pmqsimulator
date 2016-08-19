@@ -1,0 +1,12 @@
+declared-services: 
+      ibm-iotf-py-sim: 
+        label: iotf-service
+        plan: iotf-service-free
+applications:
+- services:
+  - ibm-iotf-py-sim
+  name: pmqsim
+  host: pmqsim-${random-word}
+  memory: 128M
+  instances: 1
+  path: .
